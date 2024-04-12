@@ -1,0 +1,16 @@
+{
+  "name": "project-1.6",
+  "version": "0.0.1",
+  "description": "Landing page for project 1.6 'kata-academy'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "KooWeso",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
