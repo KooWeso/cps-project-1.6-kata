@@ -5,11 +5,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   output: {
+    path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: "[name][ext]",
     filename: '[name].[contenthash].js',
     clean: true,
   },
-  modules: {
+  devServer: {
+    port: 3000,
+    compress: true,
+    hot: true,
+
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+  },
+  module: {
     rules: [ //rules
       {
         test: /\.(?:js|mjs|cjs)$/,
@@ -37,6 +47,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'SCP 1.6',
+      filename: 'index.html',
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css'
