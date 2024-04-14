@@ -42,8 +42,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'assets/imgs', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
+      },
+      {
+        test: /\.svg$/i,
+        type: 'assets/icons',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
