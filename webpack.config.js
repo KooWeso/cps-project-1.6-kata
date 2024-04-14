@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { Generator } = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -43,15 +44,24 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        type: 'assets/imgs', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
+        type: 'asset/resource', // predefined type by webpack
+        generator: {
+          filename: 'assets/imgs/[name].[contenthash][ext]',//tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
+        }
       },
       {
         test: /\.svg$/i,
-        type: 'assets/icons',
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/icons/[name].[contenthash][ext]', // for icons
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'assets/fonts', // for fonts
+        type: 'asset/resource', 
+        generator: {
+          filename: 'assets/fonts/[name].[contenthash][ext]',// for fonts
+        }
       },
     ],
   },
