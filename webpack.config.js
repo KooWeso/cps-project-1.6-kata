@@ -7,8 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name].[contenthash].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
-    filename: 'scripts/[name].[contenthash].js',
-    clean: true,
+    filename: 'scripts/[name].[contenthash].js', //describes the name of the output file - with its contenthash (this one for js)
+    clean: true, // when true, removes old dist files automatically with each build
   },
   devServer: {
     port: 3000,
@@ -19,7 +19,7 @@ module.exports = {
     },
   },
   module: {
-    rules: [ //rules
+    rules: [ //rules search for files with certain extensions (js, scss, png, etc.)
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
@@ -36,26 +36,26 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+        use: [MiniCssExtractPlugin.loader, // third (last)(goes to line #60)
+          "css-loader", // second
+          "sass-loader" // runs first
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'assets/imgs',
+        type: 'assets/imgs', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'assets/fonts',
+        type: 'assets/fonts', // for fonts
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'SCP 1.6',
+      title: 'SCP 1.6', //lol
       filename: 'index.html',
-      template: './src/index.html',
+      template: './src/index.html', //from where to get the template (./ works fine)
     }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css'
