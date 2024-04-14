@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { type } = require('os');
 
 module.exports = {
   mode: 'development',
@@ -15,7 +14,6 @@ module.exports = {
     port: 3000,
     compress: true,
     hot: true,
-
     static: {
       directory: path.join(__dirname, "dist"),
     },
@@ -57,12 +55,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'SCP 1.6',
       filename: 'index.html',
-
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles/style.css'
-      
-    }), // file name '[name].css' by default
+      filename: 'styles/[name].[contenthash].css'
+      // file name '[name].css' by default
+    }),
   ],
 }
