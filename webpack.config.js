@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name].[contenthash].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
-    filename: '[name].[contenthash].js',
+    filename: 'scripts/[name].[contenthash].js',
     clean: true,
   },
   devServer: {
