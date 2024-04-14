@@ -1,12 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { type } = require('os');
 
 module.exports = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: '[name].[contenthash].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
     filename: '[name].[contenthash].js',
     clean: true,
   },
@@ -44,11 +45,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: 'assets/imgs',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: 'assets/fonts',
       },
     ],
   },
@@ -56,10 +57,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'SCP 1.6',
       filename: 'index.html',
+
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'styles/style.css'
+      
     }), // file name '[name].css' by default
   ],
 }
