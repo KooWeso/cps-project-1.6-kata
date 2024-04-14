@@ -1,7 +1,7 @@
 {
-  "name": "project-1.6",
+  "name": "webpack-project-1.6",
   "version": "1.0.0",
-  "description": "Landing page for project 1.6 'kata-academy'",
+  "description": "webpack template for project 1.6 'kata-academy'",
   "main": "index.js",
   "scripts": {
     "dev": "npx webpack serve --mode development",
