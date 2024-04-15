@@ -1,0 +1,12 @@
+@use './modules/module-bundle' as *;
+
+
+//page centering
+.outer-wrapper {
+    display: flex;
+    padding: 0 $space;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: $breakpoint-lg;
+}

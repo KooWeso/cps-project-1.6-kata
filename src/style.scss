@@ -1,5 +1,12 @@
-div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
+// scss modules
+@use './styles/modules/module-bundle';
+@use './styles/modules/reset';
+@use './styles/modules/btns';
+// styles/blocks
+@use './styles/page-center.scss';
+@use './styles/price-list.scss';
+@use './styles/side-menu.scss';
+@use './styles/feedback.scss';
+@use './styles/brands.scss';
+@use './styles/repair.scss';
+@use './styles/call.scss';

@@ -1,0 +1,6 @@
+@use './modules/module-bundle' as *;
+@use './modules/btns' as btn;
+
+.show {
+    @include btn.btnGet(btn.$btn-medium, 'call');
+}

@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// remove scroll bar
+nav,
+.scrollbar-non {
+    scrollbar-width: none;
+    -ms-overflow-width: none;
+}
+
+nav::-webkit-scrollbar,
+.scrollbar-non::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+textarea {
+    resize: none;
+}
+
+dialog {
+    overflow: visible;
+    border: none;
+}
+
+ul {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
