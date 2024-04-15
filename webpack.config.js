@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name].[contenthash].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
+    publicPath: '/',
     filename: 'scripts/[name].[contenthash].js', //describes the name of the output file - with its contenthash (this one for js)
     clean: true, // when true, removes old dist files automatically with each build
   },
@@ -34,6 +35,10 @@ module.exports = {
             ]
           }
         }
+      },
+      {
+        test: /\.html$/i,
+        use: 'html-loader',
       },
       {
         test: /\.scss$/i,
