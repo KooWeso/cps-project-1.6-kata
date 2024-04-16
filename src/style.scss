@@ -1,7 +1,10 @@
+@use './assets/font/style-font.scss'; // font is it needed here? I guess not
 // scss modules
 @use './styles/modules/module-bundle';
+@use './styles/modules/font-set'; //because this one provides the font
 @use './styles/modules/reset';
 @use './styles/modules/btns';
+@use './styles/modules/module-styles';
 // styles/blocks
 @use './styles/page-center.scss';
 @use './styles/price-list.scss';
@@ -10,3 +13,9 @@
 @use './styles/brands.scss';
 @use './styles/repair.scss';
 @use './styles/call.scss';
+
+//debug -->
+body {
+    background-color: #000;
+}
+//

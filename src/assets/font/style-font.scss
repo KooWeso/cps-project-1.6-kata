@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'TTLakes-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: .875rem;
+    letter-spacing: .0125rem;
+    vertical-align: top;
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+         url('/src/assets/font/TTLakes-Regular.woff') format('woff'),
+         url('/src/assets/font/TTLakes-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TTLakes-Medium';
+    font-style: normal;
+    font-weight: 500;
+    vertical-align: top;
+    letter-spacing: -.0125rem;
+    line-height: 1.5rem;
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+         url('/src/assets/font/TTLakes-Medium.woff') format('woff'),
+         url('/src/assets/font/TTLakes-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TTLakes-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: -.0375rem;
+    vertical-align: top;
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+         url('/src/assets/font/TTLakes-Bold.woff') format('woff'),
+         url('/src/assets/font/TTLakes-Bold.ttf') format('truetype');
+}
