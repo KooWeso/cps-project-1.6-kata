@@ -14,25 +14,23 @@ const
 
 btnBurger.addEventListener('click', () => {
     sideMenu.classList.remove(styleHidden);
-    blur.style.display = 'block';
+    blur.style.display = 'block'; // f*ck personal class 
     overlay.style.display = 'block';
-    // overlay.style.transform = 'translateX(0%)';
     setTimeout(() => {
         sideMenu.style.transform = 'translateX(0%)';
         blur.style.transform = 'translateX(0%)';
-        overlay.style.opacity = '0.75';
-    }, 10);
+        overlay.style.opacity = '0.75'; // value could be a variable
+    }, 10); // without this transition will not work
 
 });
 
 btnClose.addEventListener('click', () => {
     sideMenu.style.transform = 'translateX(-100%)';
-    // overlay.style.transform = 'translateX(-100%)';
-    overlay.style.opacity = '0';
     blur.style.transform = 'translateX(-100%)';
+    overlay.style.opacity = '0';
     setTimeout(() => {
         sideMenu.classList.add(styleHidden);
         overlay.style.display = 'none';
         blur.style.display = 'none';
-    }, 500);
+    }, 500); // 0.5s
 })
