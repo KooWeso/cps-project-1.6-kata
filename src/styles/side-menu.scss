@@ -1,29 +1,113 @@
-@use './modules/module-bundle' as *;
+@use './modules/module-bundle'as *;
+
+// media query at md
+@mixin mediaShow ($boolean) {
+
+    $display-property: none; // for overlay, etc.
+    $position-for-sidemenu: fixed; // for side menu only
+
+    // for side menu only
+    @if ($boolean) {
+        $position-for-sidemenu: relative;
+        $display-property: block;
+    }
+
+    position: fixed;
+
+    @media (min-width: $breakpoint-md) {
+        position: $position-for-sidemenu;
+        display: $display-property;
+    }
+}
+
+@mixin defState() {
+    //size by default
+    width: 100%;
+    height: 100%;
+    // transition -->
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateX(-100%);
+    @media (min-width: $breakpoint-md) {
+        transform: translateX(0%) !important;
+    }
+    // <--
+}
+// for side-menu elements
+@mixin mediaHide () {
+    @media (min-width: $breakpoint-md) {
+        display: none !important;
+    }
+}
 
 .side-menu {
-    width: 100%;
+    z-index: 10;
+    position: absolute;
     max-width: $breakpoint-xs;
-    height: 100%;
-
     background: $background-light;
 
+    @include defState();
+
+    @include mediaShow(true);
+
+    // 360px 
     @media (max-width: $breakpoint-xsm) {
         max-width: $breakpoint-xsm;
     }
 
-    &__overlay {
-        position: absolute;
+    // content -->
+    &__content {
+        overflow-y: scroll;
+        // not ready!!!!!!
+        z-index: 10;
+        // stays with scroll
+        position: sticky; //not going anywhere unlike fixed :)
         top: 0;
-        left: 0;
-        // width: 100vw;
-        height: 100%;
-        background-color: $background-light;
-        opacity: 0.2;
+        //
+        height: 100vh;
+
+    }
+
+    // <--
+
+    // other stuff -->
+
+    &__overlay {
+
+        background: $background-light;
+        opacity: 0; // change with js later
+
+        @include defState();
+        @include mediaShow(false);
+        @include mediaHide();
+        // unset
+        transform: unset;
+        width: 200vw;
+    }
+
+    // in progress or delete
+    &__blur {
+
+        backdrop-filter: blur(.2rem);
+
+        @include defState();
+        @include mediaShow(false);
+        @include mediaHide();
+
     }
 
     &__debug {
+        // for debug only
         width: 100%;
         height: 1700px;
         background-color: bisque;
+
+    }
+
+    &--hidden {
+        display: none;
+    
+        @media (min-width: $breakpoint-md) {
+            display: block;
+        }
     }
 }

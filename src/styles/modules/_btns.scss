@@ -54,6 +54,7 @@ $btn-large: ( //type
     &__medium {
         width: 2.5rem;
         aspect-ratio: 1/1;
+        border-radius: 100%;
 
         // tranzition -->
         transition: filter .1s ease-in-out;
