@@ -44,7 +44,8 @@ $btn-large: ( //type
     &--plus {
         &:hover,
         &:focus {
-            filter: drop-shadow(0 0 .5rem red);
+            background: $background-dark;
+            border-radius: .5rem;
         }
     }
 
