@@ -6,3 +6,31 @@ $breakpoint-md: 1360px;
 $breakpoint-lg: 1440px;
 // padding/margin
 $space: clamp(1rem, 3.125vw, 1.5rem);
+// font                       
+$font-reg: 'TTLakes-Regular', monospace;
+$font-med: 'TTLakes-Medium', monospace;
+$font-bold: 'TTLakes-Bold', monospace;
+
+@mixin fontReg() {
+    font-family: $font-reg;
+    font-weight: normal;
+    font-size: .875rem;
+    letter-spacing: .0125rem;
+    vertical-align: top;
+}
+
+@mixin fontMed() {
+    font-family: $font-med;
+    font-weight: 500;
+    vertical-align: top;
+    letter-spacing: -.0125rem;
+    line-height: 1.5rem;
+}   
+
+@mixin fontBold() {
+    font-family: $font-bold;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: -.0375rem;
+    vertical-align: top;
+}

@@ -1,2 +1,5 @@
 @use 'module-bundle' as *;
-@use '../../assets/font/style-font.scss';
+
+button {
+    @include fontMed();
+}

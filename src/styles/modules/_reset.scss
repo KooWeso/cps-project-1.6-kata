@@ -35,11 +35,16 @@ dialog {
 }
 
 ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
 img {

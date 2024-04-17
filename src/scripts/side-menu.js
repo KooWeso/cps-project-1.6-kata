@@ -25,7 +25,7 @@ btnBurger.addEventListener('click', () => {
 });
 
 btnClose.addEventListener('click', () => {
-    sideMenu.style.transform = 'translateX(-100%)';
+    sideMenu.style.transform = 'translateX(-110%)';
     blur.style.transform = 'translateX(-100%)';
     overlay.style.opacity = '0';
     setTimeout(() => {
