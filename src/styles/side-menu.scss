@@ -91,6 +91,12 @@
     }
 
     &__mid-item {
+        
+        &:hover,
+        &:focus {
+            background: $background-dark;
+            border-radius: .5rem;
+        }
 
         & > button {
             display: inline-block;
@@ -101,7 +107,8 @@
     }
 
     &__bottom {
-
+        display: flex; // flex !!!!!!!
+        flex-direction: column;
     }
     // <-- content
 
