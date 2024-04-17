@@ -34,3 +34,31 @@
         left: calc(var.$space * -1.1);
     }
 }
+
+@mixin fade () {
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        align-self: center;
+        background: linear-gradient(90deg, clr.$background-dark, transparent);
+        height: 100%;
+        width: 5%;
+        left: 0;
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        align-self: center;
+        background: linear-gradient(90deg, transparent, clr.$background-dark);
+        height: 100%;
+        width: 5%;
+        right: 0;
+        z-index: 1;
+    }
+
+}

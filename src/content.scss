@@ -1,12 +1,26 @@
-@use './styles/modules/module-bundle' as *;
+@use './styles/modules/module-bundle'as *;
 
 @mixin mediaHide() {
     @media (min-width: $breakpoint-md) {
         display: none;
     }
-} 
+}
+
+@mixin mediaShow() {
+    @media (min-width: $breakpoint-md) {
+        display: flex;
+    }
+}
+
+// scrollbar-width: thin;
+// scrollbar-color: $text-link $background-light;
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: $background-light;
+    border-bottom: 1px solid $border-highlight-light;
     width: 100%;
     padding: $space;
 
@@ -23,21 +37,22 @@
 
     &__nav-list:first-of-type {
         display: none;
-        
+
         @media (min-width: $breakpoint-sm) {
             display: flex;
         }
     }
 
     &__nav-divider {
-        border-left: 2px solid $border;
+        border-left: 2px solid $divider;
         border-radius: 2px;
         width: 2px;
         height: 2rem;
-        
+
 
         &--first {
             order: 2;
+
             @media (min-width: $breakpoint-sm) {
                 order: 0;
             }
@@ -45,6 +60,7 @@
 
         &--second {
             display: none;
+
             @media (min-width: $breakpoint-sm) {
                 display: flex;
             }
@@ -52,8 +68,71 @@
     }
 }
 
-.main { 
+.main {
+    width: 100%;
+    @include flex(1rem, column, 0);
+    padding: $space;
+
 }
 
-.footer {
+.main-title-wrapper {
+    height: 3.5rem; //perfect
+    @include flex(0, 0, center);
+    justify-content: space-between;
+
+    &__buttons {
+        @include flex(2rem, 0, center);
+        display: none;
+
+        @include mediaShow();
+
+        >button {
+            @include flex(1rem, 0, center);
+        }
+    }
 }
+
+.main-nav {
+    @include flex(1rem, 0, center);
+    margin-inline: calc($space * -1);
+
+    @include fade();
+
+    &__list {
+        padding-left: $space;
+
+        display: flex;
+        flex-wrap: nowrap;
+        gap: .5rem;
+
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $shadow $background-light;
+
+
+        @media (min-width: $breakpoint-md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        border: 2px solid $background-dark;
+        opacity: 0.6;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            background: $background-light;
+            border: 2px solid $border-highlight;
+            border-radius: .5rem;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        padding: .5rem 1rem;
+        white-space: nowrap;
+    }
+}
+
+.footer {}

@@ -1,5 +1,14 @@
 @use 'module-bundle'as *;
 
+a.btn {
+    @include fontMed();
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
 button {
     @include fontMed();
 
