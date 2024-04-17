@@ -1,3 +1,5 @@
+@use 'module-bundle'as *;
+
 .hidden {
     display: none !important;
 }
@@ -5,4 +7,11 @@
 .active {
     cursor: default !important;
     opacity: .5 !important;
+}
+
+.title-wrapper {
+    &>* {
+        margin-left: $space; 
+        @include dividerHighlight(2.5rem);
+    }
 }
