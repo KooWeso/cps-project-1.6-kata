@@ -41,15 +41,6 @@ $btn-large: ( //type
     background-position: center;
     background-size: contain;
 
-    &--plus {
-        &:hover,
-        &:focus {
-            background: $background-dark;
-            border-radius: .5rem;
-        }
-    }
-
-
     &__small {
         width: 1.5rem;
         aspect-ratio: 1/1;
