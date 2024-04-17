@@ -1,0 +1,59 @@
+@use './styles/modules/module-bundle' as *;
+
+@mixin mediaHide() {
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+} 
+
+.header {
+    width: 100%;
+    padding: $space;
+
+    @include flex(1rem, 0, center);
+    @include mediaHide();
+
+    &__nav {
+        @include flex(1rem, 0, center);
+
+        &:first-child {
+            flex: 1;
+        }
+    }
+
+    &__nav-list:first-of-type {
+        display: none;
+        
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+        }
+    }
+
+    &__nav-divider {
+        border-left: 2px solid $border;
+        border-radius: 2px;
+        width: 2px;
+        height: 2rem;
+        
+
+        &--first {
+            order: 2;
+            @media (min-width: $breakpoint-sm) {
+                order: 0;
+            }
+        }
+
+        &--second {
+            display: none;
+            @media (min-width: $breakpoint-sm) {
+                display: flex;
+            }
+        }
+    }
+}
+
+.main { 
+}
+
+.footer {
+}
