@@ -1,2 +1,18 @@
 @forward 'clr';
 @forward 'var';
+
+@mixin flex ($gap, $direction, $align) {
+    display: flex;
+
+    @if ($gap !=0) {
+        gap: $gap;
+    }
+
+    @if ($direction==column) {
+        flex-direction: $direction;
+    }
+
+    @if ($align==center) {
+        align-items: $align;
+    }
+}
