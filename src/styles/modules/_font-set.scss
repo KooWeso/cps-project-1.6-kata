@@ -3,3 +3,12 @@
 button {
     @include fontMed();
 }
+
+h1 {
+    @include fontBold();
+    font-size: 1.75rem;
+}
+
+h2 {
+    @include fontReg();
+}
