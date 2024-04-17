@@ -1,7 +1,12 @@
-@use 'module-bundle' as *;
+@use 'module-bundle'as *;
 
 button {
     @include fontMed();
+
+    &>span {
+        @include fontMed();
+
+    }
 }
 
 h1 {
