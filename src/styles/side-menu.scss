@@ -60,7 +60,7 @@
 
     // content -->
     &__content {
-        overflow-y: scroll;
+        overflow-y: auto;
         z-index: 10;
         // stays with scroll
         position: sticky; //not going anywhere unlike fixed :)
