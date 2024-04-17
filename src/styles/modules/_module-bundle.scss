@@ -19,7 +19,10 @@
     }
 }
 
-@mixin dividerHighlight() {
+@mixin dividerHighlight($divider-height) {
+    position: relative;
+    display: flex;
+
     &::before{ // for dividers
         content: '';
         position: absolute;
@@ -27,7 +30,7 @@
         border-left: 6px solid clr.$divider-highlight;
         border-radius: 6px;
         width: 6px;
-        height: 2rem;
+        height: $divider-height;
         left: calc(var.$space * -1.1);
     }
 }
