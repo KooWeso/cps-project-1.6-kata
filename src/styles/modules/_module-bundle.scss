@@ -1,5 +1,7 @@
 @forward 'clr';
 @forward 'var';
+@use 'clr';
+@use 'var';
 
 @mixin flex ($gap, $direction, $align) {
     display: flex;
@@ -14,5 +16,18 @@
 
     @if ($align==center) {
         align-items: $align;
+    }
+}
+
+@mixin dividerHighlight() {
+    &::before{ // for dividers
+        content: '';
+        position: absolute;
+        align-self: center;
+        border-left: 6px solid clr.$divider-highlight;
+        border-radius: 6px;
+        width: 6px;
+        height: 2rem;
+        left: calc(var.$space * -1.1);
     }
 }
