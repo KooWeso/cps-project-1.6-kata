@@ -4,10 +4,17 @@
 //page centering
 .outer-wrapper {
     display: flex;
+    background: repeating-linear-gradient(-45deg, $background-dark 0 5px, $background-light 0 10px);
 }
 .wrapper {
     display: flex;
     margin: 0 auto;
     width: 100%;
     max-width: $breakpoint-lg;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    background: $background-dark;
 }
