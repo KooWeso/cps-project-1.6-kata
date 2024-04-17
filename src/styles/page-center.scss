@@ -14,7 +14,7 @@
 }
 
 .content-wrapper {
-    @include flex(1rem, column, 0);
+    @include flex(0, column, 0);
     width: 100%;
     background: $background-dark;
 }

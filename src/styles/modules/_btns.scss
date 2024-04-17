@@ -62,7 +62,6 @@ $btn-large: ( //type
         &:focus {
             filter: drop-shadow(0 0 .5rem red);
         }
-
         // <--
 
         @each $name in map-keys($btn-medium) {

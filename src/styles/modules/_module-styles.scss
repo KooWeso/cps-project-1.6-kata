@@ -11,7 +11,6 @@
 
 .title-wrapper {
     &>* {
-        margin-left: $space; 
         @include dividerHighlight(2.5rem);
     }
 }
