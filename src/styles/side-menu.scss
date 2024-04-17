@@ -27,11 +27,14 @@
     // transition -->
     transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateX(-100%);
+
     @media (min-width: $breakpoint-md) {
         transform: translateX(0%) !important;
     }
+
     // <--
 }
+
 // for side-menu elements
 @mixin mediaHide () {
     @media (min-width: $breakpoint-md) {
@@ -61,6 +64,8 @@
     // content -->
     &__content {
         overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $text-link $background-light;
         z-index: 10;
         // stays with scroll
         position: sticky; //not going anywhere unlike fixed :)
@@ -70,9 +75,10 @@
         padding: $space;
 
         @include flex(1rem, column, 0);
-        
+
 
         box-shadow: 1.5rem 0 2rem 0 $shadow;
+
         @media (min-width: $breakpoint-md) {
             box-shadow: none;
         }
@@ -83,7 +89,7 @@
     &__top {
         @include flex(1rem, 0, center);
 
-        & > *:last-child {
+        &>*:last-child {
             margin-left: auto;
         }
     }
@@ -91,25 +97,48 @@
     &__mid {
         flex: 1;
     }
-    
+
     &__mid-list {
         display: flex; // flex !!!!!!!
         flex-direction: column;
     }
 
     &__mid-item {
-        
+
         &:hover,
         &:focus {
             background: $background-dark;
             border-radius: .5rem;
         }
 
-        & > button {
+        &>button {
             display: inline-block;
             width: 100%;
             padding: .75rem 0;
             text-align: left;
+        }
+
+        &--active {
+            position: relative;
+            display: flex;
+
+            &::before{ // for dividers
+                content: '';
+                position: absolute;
+                align-self: center;
+                border-left: 6px solid $divider-highlight;
+                border-radius: 6px;
+                width: 6px;
+                height: 2rem;
+                left: calc($space * -1.1);
+            }
+
+
+            &:hover,
+            &:focus {
+                background: none;
+                border-radius: .5rem;
+            }
         }
     }
 
@@ -117,28 +146,29 @@
         @include flex(0, column, 0);
     }
 
-     &__contact {
+    &__contact {
         @include flex(1rem, column, 0);
-     }
+    }
 
-     &__contact-list {
+    &__contact-list {
         @include flex(1rem, 0, 0);
-     }
+    }
 
-     &__mail {
-         @include fontReg();
-         color: $text;
-     }
+    &__mail {
+        @include fontReg();
+        color: $text;
+    }
 
-     &__phone {
-         @include fontBold();
-         color: $text;
-     }
+    &__phone {
+        @include fontBold();
+        color: $text;
+    }
 
-     &__lang {
+    &__lang {
         margin-top: 1rem;
         @include flex(1rem, 0, 0);
-     }
+    }
+
     // <-- content
 
     // other stuff -->
@@ -153,7 +183,7 @@
         @include mediaHide();
         // unset
         transform: unset;
-        width: 200vw;
+        width: 220vw;
     }
 
     &__blur {
@@ -176,7 +206,7 @@
 
     &--hidden {
         display: none;
-    
+
         @media (min-width: $breakpoint-md) {
             display: block;
         }
