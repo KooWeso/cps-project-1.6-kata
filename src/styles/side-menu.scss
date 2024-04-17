@@ -119,10 +119,8 @@
         }
 
         &--active {
-            position: relative;
-            display: flex;
 
-            @include dividerHighlight();
+            @include dividerHighlight(2rem);
 
             &:hover,
             &:focus {
@@ -177,6 +175,7 @@
     }
 
     &__blur {
+        z-index: 10; // above header
 
         backdrop-filter: blur(.2rem);
 
