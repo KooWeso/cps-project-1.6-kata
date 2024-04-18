@@ -5,6 +5,7 @@
 .outer-wrapper {
     display: flex;
     background: repeating-linear-gradient(-45deg, $background-dark 0 5px, $background-light 0 10px);
+    height: 100vh;
 }
 .wrapper {
     display: flex;

@@ -2,11 +2,20 @@
 
 a.btn {
     @include fontMed();
-
+    color: $text;
     &:hover,
     &:focus {
         text-decoration: none;
     }
+}
+
+p {
+    @include fontReg();
+}
+
+a {
+    // @include fontMed();
+    color: $text-link;
 }
 
 button {
@@ -28,9 +37,7 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
-    @include fontReg();
-}
+
 
 span {
     @include fontReg();

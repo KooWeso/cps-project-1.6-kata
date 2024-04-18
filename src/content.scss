@@ -72,7 +72,7 @@
     width: 100%;
     @include flex(1rem, column, 0);
     padding: $space;
-
+    flex: 1;
 }
 
 .main-title-wrapper {
@@ -176,4 +176,28 @@
     }
 }
 
-.footer {}
+.footer {
+    border-top: 1px solid $border-highlight-light;
+    padding: $space;
+    @include flex(1rem, column, 0);
+    text-align: center;
+
+    @media (min-width: $breakpoint-sm) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        flex: 1;
+        // color: blue;
+        @media (min-width: $breakpoint-sm) {
+            &:first-child {
+                text-align: start;
+            }
+        
+            &:last-child {
+                text-align: end;
+            }
+        }
+    }
+}
