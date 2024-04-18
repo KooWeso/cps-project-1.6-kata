@@ -47,10 +47,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource', // predefined type by webpack
         generator: {
-          filename: 'assets/imgs/[name].[contenthash][ext]',//tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
+          filename: 'assets/imgs/[name].[contenthash][ext]', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
         }
       },
       {
@@ -62,9 +66,9 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource', 
+        type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[name].[contenthash][ext]',// for fonts
+          filename: 'assets/fonts/[name].[contenthash][ext]', // for fonts
         }
       },
     ],
