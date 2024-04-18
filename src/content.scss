@@ -135,4 +135,45 @@
     }
 }
 
+.main-content {
+    @include flex(1rem, column, 0);
+
+    @media (min-width: $breakpoint-sm) {
+        flex-direction: row;
+    }
+
+    &__article {
+        flex: 1;
+
+        &>* {
+            margin-top: 1rem;
+        }
+    }
+
+    &__img-box {
+        flex: 1;
+        margin-inline: calc($space * -1);
+
+        @media (min-width: $breakpoint-sm) {
+            margin-inline: unset;
+        }
+    }
+
+    &__img {
+        border-radius: 6px;
+        margin-bottom: auto;
+        // perfect image lol
+        aspect-ratio: 16/9;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__button {
+        transition: filter .5s ease-in-out;
+        .btn {
+            transition: transform .5s ease-in-out;
+        }
+    }
+}
+
 .footer {}

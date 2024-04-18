@@ -12,12 +12,12 @@
 .hide {
 
     display: grid;
-    transition: grid-template-rows .3s ease-in-out;
+    transition: grid-template-rows .4s ease-in-out;
     grid-template-rows: 1fr;
 
     * {
         overflow: hidden;
-        transition: height .3s ease-in-out;
+        transition: height 5s ease-in-out; //hahaha
         min-height: 1.05rem;
         height: 100%;
     }
