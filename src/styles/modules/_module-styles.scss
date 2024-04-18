@@ -9,8 +9,30 @@
     opacity: .5 !important;
 }
 
+.hide {
+
+    display: grid;
+    transition: grid-template-rows .3s ease-in-out;
+    grid-template-rows: 1fr;
+
+    * {
+        overflow: hidden;
+        transition: height .3s ease-in-out;
+        min-height: 1.05rem;
+        height: 100%;
+    }
+
+    &--closed {
+        grid-template-rows: 0fr;
+        * {
+            height: 0%;
+        }
+    }
+
+}
+
 .title-wrapper {
-    &>* {
+    * {
         @include dividerHighlight(2.5rem);
     }
 }
