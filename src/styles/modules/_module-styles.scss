@@ -40,7 +40,9 @@
 .subtitle-wrapper {
     border-top: 1px solid $border-highlight-light;
     background: linear-gradient(90deg, transparent, $background-light);
-    margin-inline: calc($space * -1);
+    @media (min-width: $breakpoint-sm) {
+        margin-inline: calc($space * -1);        
+    }
     * {
         padding: 1rem $space;
     }

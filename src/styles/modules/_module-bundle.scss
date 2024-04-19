@@ -47,7 +47,7 @@
         height: 100%;
         width: 5%;
         left: 0;
-        z-index: 1;
+        z-index: 11;
     }
 
     &::after {
@@ -58,7 +58,7 @@
         height: 100%;
         width: 5%;
         right: 0;
-        z-index: 1;
+        z-index: 11;
     }
 
 }

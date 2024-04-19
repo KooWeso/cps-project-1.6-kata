@@ -94,11 +94,11 @@
                             <h1>Услуги и сервисы</h1>
                         </div>
                         <div class="main-title-wrapper__buttons">
-                            <button class="btn btn--plus btn__content">
+                            <button class="btn btn--plus btn__content-text">
                                 <span>Оставить заявку</span>
                                 <span class="btn btn__medium btn__medium--repair"></span>
                             </button>
-                            <button class="btn btn--plus btn__content">
+                            <button class="btn btn--plus btn__content-text">
                                 <span>Статус ремонта</span>
                                 <span class="btn btn__medium btn__medium--checkstatus"></span>
                             </button>
@@ -116,7 +116,7 @@
                                 <a class="btn main-nav__button" href="#price">Цены на услуги</a>
                             </li>
                             <li class="main-nav__item">
-                                <a class="btn main-nav__button" href="#adresse">Адреса сервисных центров</a>
+                                <a class="btn main-nav__button" href="#adress">Адреса сервисных центров</a>
                             </li>
                             <li class="main-nav__item">
                                 <a class="btn main-nav__button" href="#special-price">Специальные цены</a>
@@ -148,7 +148,7 @@
                             </div>
 
 
-                            <button class="btn btn__content main-content__button">
+                            <button class="btn btn__content-text main-content__button">
                                 <span class="btn btn__small btn__small--expand"></span>
                                 <span class="main-content__button-text">Читать ещё</span>
                             </button>
@@ -220,58 +220,63 @@
                                 </li>
                             </ul>
                             <div class="swiper-pagination"></div>
-                            <button class="btn btn__content">
+                            <button class="btn btn__content brands__btn-expand">
                                 <span>Показать еще</span>
                                 <span class="btn btn__small btn__small--expand"></span>
                             </button>
                         </section>
                     </section>
-                    <!-- <section class="section repair">
+                    <section class="section repair">
                         <div class="subtitle-wrapper">
-                            <h2>Ремонт различных видов техники</h2>
+                            <h2 id="additional-service">Additional services</h2>
                         </div>
-                        <section class="section__content">
-                            <ul class="section__card-wrapper repair__card-wrapper">
-                                <button class="btn repair__btn">
-                                    <li class="section__card repair__card">
-                                        <p>Ремонтные ноутбуков</p>
-                                        <div class="btn btn__medium btn__medium--go"></div>
-                                    </li>
-                                </button>
-                                <button class="btn repair__btn">
-                                    <li class="section__card repair__card">
-                                        <p>Ремонтные планшетов</p>
-                                        <div class="btn  btn__medium btn__medium--go"></div>
-                                    </li>
-                                </button>
-                                <button class="btn repair__btn">
-                                    <li class="section__card repair__card">
-                                        <p>Ремонтные ПК</p>
-                                        <div class="btn  btn__medium btn__medium--go"></div>
-                                    </li>
-                                </button>
-                                <button class="btn repair__btn">
-                                    <li class="section__card repair__card">
-                                        <p>Ремонтные мотороло</p>
-                                        <div class="btn  btn__medium btn__medium--go"></div>
-                                    </li>
-                                </button>
+                        <section class="section__content swiper">
+                            <ul class="section__card-wrapper repair__card-wrapper swiper-wrapper">
+                                <li class="section__card repair__card swiper-slide">
+                                    <button class="btn repair__btn">
+                                        <span>Ремонтные ноутбуков</span>
+                                        <span class="btn btn__medium btn__medium--go"></span>
+                                    </button>
+                                </li>
+                                <li class="section__card repair__card swiper-slide">
+                                    <button class="btn repair__btn">
+                                        <span>Ремонтные планшетов</span>
+                                        <span class="btn  btn__medium btn__medium--go"></span>
+                                    </button>
+                                </li>
+                                <li class="section__card repair__card swiper-slide">
+                                    <button class="btn repair__btn">
+                                        <span>Ремонтные ПК</span>
+                                        <span class="btn  btn__medium btn__medium--go"></span>
+                                    </button>
+                                </li>
+                                <li class="section__card repair__card swiper-slide">
+                                    <button class="btn repair__btn">
+                                        <span>Ремонтные мотороло</span>
+                                        <span class="btn  btn__medium btn__medium--go"></span>
+                                    </button>
+                                </li>
                             </ul>
+                            <div class="swiper-pagination"></div>
+                            <button class="btn btn__content repair__btn-expand">
+                                <span>Показать еще</span>
+                                <span class="btn btn__small btn__small--expand"></span>
+                            </button>
                         </section>
-                    </section> -->
-                    <!-- <section class="section price-list">
+                    </section>
+                    <section class="section price-list">
                         <div class="price-list__top">
                             <div class="subtitle-wrapper">
-                                <h2 class="">Цена на услуги</h2>
+                                <h2 id="price">Цена на услуги</h2>
                             </div>
-                            <section class="section__content">
+                            <section class="section__content swiper">
                                 <div class="text">
                                     <p class="text__info">Ремонтные услуги</p>
                                     <p class="text__info">Цена</p>
                                     <p class="text__info">Срок</p>
                                 </div>
-                                <ul class="section__card-wrapper price-list__card-wrapper">
-                                    <li class="section__card price-list__card">
+                                <ul class="section__card-wrapper price-list__card-wrapper swiper-wrapper">
+                                    <li class="section__card price-list__card swiper-slide">
                                         <p class="price-list__card-service">Диагностика</p>
                                         <p class="price-list__card-price">Бесплатно</p>
                                         <div>
@@ -279,7 +284,7 @@
                                             <button class="btn btn__large btn__large--order"></button>
                                         </div>
                                     </li>
-                                    <li class="section__card price-list__card">
+                                    <li class="section__card price-list__card swiper-slide">
                                         <p class="price-list__card-service">Замена дисплея</p>
                                         <p class="price-list__card-price">1 000 ₽</p>
                                         <div>
@@ -287,7 +292,7 @@
                                             <button class="btn  btn__large btn__large--order"></button>
                                         </div>
                                     </li>
-                                    <li class="section__card price-list__card">
+                                    <li class="section__card price-list__card swiper-slide">
                                         <p class="price-list__card-service">Замена полифонического динамика</p>
                                         <p class="price-list__card-price">1 000 ₽</p>
                                         <div>
@@ -295,7 +300,7 @@
                                             <button class="btn  btn__large btn__large--order"></button>
                                         </div>
                                     </li>
-                                    <li class="section__card price-list__card">
+                                    <li class="section__card price-list__card swiper-slide">
                                         <p class="price-list__card-service">Тестирование с выдачей технического заключения</p>
                                         <p class="price-list__card-price">1 000 ₽</p>
                                         <div>
@@ -303,7 +308,7 @@
                                             <button class="btn  btn__large btn__large--order"></button>
                                         </div>
                                     </li>
-                                    <li class="section__card price-list__card">
+                                    <li class="section__card price-list__card swiper-slide">
                                         <p class="price-list__card-service">Замена программного обеспечения</p>
                                         <p class="price-list__card-price">1 000 ₽</p>
                                         <div>
@@ -312,18 +317,19 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <div class="swiper-pagination"></div>
                             </section>
                         </div>
                         <div class="price-list__bottom">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat eveniet ea praesentium
                                 dolorem
                                 possimus ratione odit! Dolore, molestias voluptas.</p>
-                            <button class="btn">
+                            <button class="btn btn__content-text">
                                 <span> Получить комерческое предложение</span>
-                                <div class="btn btn__small btn__small--more"></div>
+                                <span class="btn btn__small btn__small--more"></span>
                             </button>
                         </div>
-                    </section> -->
+                    </section>
                 </main>
                 <footer class="footer">
                     <div class="footer__copyright">

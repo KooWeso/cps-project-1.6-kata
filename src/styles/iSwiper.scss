@@ -2,6 +2,18 @@
 
 .swiper {
     width: 100%;
+
+    @include fade();
+
+    @media (min-width: $breakpoint-sm) {
+        &::after {
+            content: none;
+        };
+
+        &::before {
+            content: none;
+        };
+    }
 }
 
 .swiper-wrapper {
@@ -9,6 +21,13 @@
 }
 
 .swiper-pagination {
+
+    position: relative !important;
+    padding-bottom: .5rem;
+
+    @media (min-width: $breakpoint-sm) {
+        padding-bottom: 0;
+    }
 
     &-bullet {
 
@@ -31,6 +50,7 @@
     :root {
         --swiper-pagination-color: #b5b6bc;
         --swiper-pagination-bullet-size: .75rem;
+        --swiper-pagination-bottom: 0rem;
     }
 }
 
