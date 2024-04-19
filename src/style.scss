@@ -1,3 +1,6 @@
+// swiper
+@use './styles/iSwiper.scss';
+// font
 @use './assets/font/style-font.scss'; // font is it needed here? I guess not
 // scss modules
 @use './styles/modules/module-bundle';
@@ -5,6 +8,7 @@
 @use './styles/modules/reset';
 @use './styles/modules/btns';
 @use './styles/modules/module-styles';
+@use './styles/modules/section';
 // styles/blocks
 @use './styles/page-center.scss';
 @use './styles/price-list.scss';

@@ -1,4 +1,4 @@
-@use 'module-bundle' as *;
+@use 'module-bundle'as *;
 
 .section {
     display: flex;
@@ -14,14 +14,14 @@
     }
 
     &__card-wrapper {
-        @media (min-width: $breakpoint-sm) {}
+        @media (min-width: $breakpoint-sm) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, auto)); // works good
+            gap: 1rem;
+        }
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, auto)); // works good
-        gap: 1rem;
-        column-gap: $space;
+
     }
-
 
     &__card {
         background: $background-light;

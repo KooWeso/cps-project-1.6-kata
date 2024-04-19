@@ -35,6 +35,7 @@ h1 {
 h2 {
     @include fontReg();
     text-transform: uppercase;
+    color: $text-light;
 }
 
 

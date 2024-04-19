@@ -1,0 +1,42 @@
+@use './modules/module-bundle'as *;
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+}
+
+.swiper-pagination {
+
+    &-bullet {
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 10px .2rem $divider-highlight !important;
+        }
+
+        &-active {
+
+            &:hover,
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+@layer components {
+    :root {
+        --swiper-pagination-color: #b5b6bc;
+        --swiper-pagination-bullet-size: .75rem;
+    }
+}
+
+
+// import Swiper style
+@media (max-width: 767px) {
+    @import "swiper/css";
+    @import "swiper/css/pagination";
+}
