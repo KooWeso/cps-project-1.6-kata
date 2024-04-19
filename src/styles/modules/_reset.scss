@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 // remove scroll bar
 nav,
 .scrollbar-non {

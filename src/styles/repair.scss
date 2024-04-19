@@ -1,12 +1,18 @@
-@use './modules/module-bundle' as *;
+@use './modules/module-bundle'as *;
 
 .repair {
     &__card {
         height: 10rem;
-        padding-block: 1rem;
+    }
+
+    &__btn {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: start;
 
         .btn {
             align-self: flex-end;
         }
     }
+
 }
