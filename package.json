@@ -8,7 +8,8 @@
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "clean": "gh-pages-clean"
+    "clean": "gh-pages-clean",
+    "deployall": "gh-pages-clean && npm run build && npm run deploy"
   },
   "keywords": [],
   "author": "KooWeso",
