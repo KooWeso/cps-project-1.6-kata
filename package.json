@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx webpack serve --mode development",
     "build": "webpack --mode production --stats-children",
-    "deploy": "npx webpack --mode production gh-pages -d dist",
+    "deploy": "npx gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
