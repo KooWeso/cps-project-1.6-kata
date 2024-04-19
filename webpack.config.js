@@ -6,9 +6,9 @@ module.exports = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: '[name].[contenthash].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
+    assetModuleFilename: '[name].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
     publicPath: '/',
-    filename: 'scripts/[name].[contenthash].js', //describes the name of the output file - with its contenthash (this one for js)
+    filename: 'scripts/[name].js', //describes the name of the output file - with its contenthash (this one for js)
     clean: true, // when true, removes old dist files automatically with each build
   },
   devServer: {
@@ -54,21 +54,21 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource', // predefined type by webpack
         generator: {
-          filename: 'assets/imgs/[name].[contenthash][ext]', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
+          filename: 'assets/imgs/[name][ext]', //tells where to put the images (creates 'assets/imgs' folder if it doesn't exist)
         }
       },
       {
         test: /\.svg$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/icons/[name].[contenthash][ext]', // for icons
+          filename: 'assets/icons/[name][ext]', // for icons
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[name].[contenthash][ext]', // for fonts
+          filename: 'assets/fonts/[name][ext]', // for fonts
         }
       },
     ],
@@ -80,7 +80,7 @@ module.exports = {
       template: './src/index.html', //from where to get the template (./ works fine)
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css'
+      filename: 'styles/[name].css'
       // file name '[name].css' by default
     }),
   ],
