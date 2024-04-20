@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name].[ext]', //describes the name of the assets (css, images, fonts) in the output folder - with their contenthash and file extension 
-    publicPath: './', //describes the URL of the output folder i dont care
+    publicPath: '../', //describes the URL of the output folder i dont care
     filename: 'scripts/[name].js', //describes the name of the output file - with its contenthash (this one for js)
     clean: true, // when true, removes old dist files automatically with each build
   },
