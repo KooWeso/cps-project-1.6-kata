@@ -8,16 +8,15 @@ body {
 
 .outer-wrapper {
     display: flex;
-    background: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWp4MHVwdXJwcG1uZW9ybmVqdG90MTZ5dWZpNWZhMDJlZWIyOHEyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZCdRHIclu9FPa/giphy.gif"); //haha
     height: 100%;
-    transition: background 3s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-
-
+    
     @media (min-width: $breakpoint-lg) {
-
+        
+        transition: background 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+        background: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWp4MHVwdXJwcG1uZW9ybmVqdG90MTZ5dWZpNWZhMDJlZWIyOHEyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZCdRHIclu9FPa/giphy.gif"); //haha
         background-size: 40% 40%;
         animation: gradient 5s linear infinite;
+        animation-direction: alternate;
     }
 
     @keyframes gradient {
