@@ -9,6 +9,8 @@ body {
 .outer-wrapper {
     display: flex;
     height: 100%;
+    background: repeating-linear-gradient(-45deg, $background-dark 0 5px, $background-light 0 10px), url("https://images.rawpixel.com/image_png_1300/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcHUyMzMxNjM2LWltYWdlLTAxLXJtNTAzXzMtbDBqOXFrNnEucG5n.png");
+
     
     @media (min-width: $breakpoint-lg) {
         
