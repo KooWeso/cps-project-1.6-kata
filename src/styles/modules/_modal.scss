@@ -30,6 +30,7 @@
 
         &__form {
             @include flexGap(1rem);
+            overflow-y: auto;
         }
         
         &__form-title-wrapper {
