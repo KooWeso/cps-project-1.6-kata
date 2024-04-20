@@ -1,8 +1,7 @@
-@use './modules/module-bundle' as *;
+@use './modules/module-bundle'as *;
 
 @mixin pseudoStl ($content) {
     content: $content;
-    // font-family: $f-med, monospace; //change font
     font-size: 14px;
     color: $text-light;
     display: block;
@@ -12,6 +11,7 @@
 
     &__card-wrapper {
         gap: 1rem;
+
         @media (min-width: $breakpoint-sm) {
             grid-template-columns: none;
             gap: 0;
@@ -19,18 +19,40 @@
             border-radius: 6px;
         }
     }
-    
+
     &__card {
+        position: relative;
         height: 12.5rem;
         flex-flow: column;
         border: none;
+        padding: 1rem $space;
+
+        @include flex(0, column, 0);
+        justify-content: space-between;
+        
 
         @media (min-width: $breakpoint-sm) {
-            padding-block: 1rem;
             height: auto;
             display: grid;
             grid-template-columns: 4fr 1fr 2.3fr;
             align-items: center;
+
+            &:hover,
+            &:focus {
+                background-color: $shadow-light;
+                filter: none;
+            }
+
+            &:not(:last-child)::after {
+
+                position: absolute;
+                content: "";
+                left: 50%;
+                bottom: 0;
+                width: 90%;
+                transform: translate(-50%, -50%);
+                border-bottom: 1px solid $border;
+            }
         }
 
         & div {
@@ -40,7 +62,7 @@
         }
     }
 
-    @media (max-width: 767px) { //change later
+    @media (max-width: 767px) {
         &__card-service {
             &::before {
                 @include pseudoStl('Ремонтные услуги');
@@ -49,7 +71,7 @@
 
         &__card-price {
             &::before {
-                @include pseudoStl('Цена');         
+                @include pseudoStl('Цена');
             }
         }
 
@@ -59,19 +81,26 @@
             }
         }
     }
-    
+
     .text {
         display: none;
+
         @media (min-width: $breakpoint-sm) {
             color: $text-light;
             display: grid;
             grid-template-columns: 4fr 1fr 2.3fr;
-            padding: 0 1rem;
+            padding: 0 $space;
         }
-        
+
     }
 
     &__bottom {
-        width: 27rem;
+        max-width: 27rem;
+        @include flex(1rem, column, center);
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            padding-inline: $space;
+        }
     }
 }

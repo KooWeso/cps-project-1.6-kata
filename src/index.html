@@ -159,7 +159,7 @@
                         <div class="subtitle-wrapper">
                             <h2 id="repair-brand">Ремонт различных видов техники</h2>
                         </div>
-                        <section class="section__content swiper">
+                        <section class="section__content brands__wrapper swiper collapse collapse--closed">
                             <ul class="section__card-wrapper brands__card-wrapper swiper-wrapper">
                                 <li class="section__card brands__card swiper-slide">
                                     <button class="btn brands__btn">
@@ -217,17 +217,17 @@
                                 </li>
                             </ul>
                             <div class="swiper-pagination"></div>
-                            <button class="btn btn__content brands__btn-expand">
-                                <span class="btn btn__small btn__small--expand"></span>
-                                <span>Показать еще</span>
-                            </button>
                         </section>
+                        <button class="btn btn__content brands__btn-expand">
+                            <span>Показать еще</span>
+                            <span class="btn btn__small btn__small--expand"></span>
+                        </button>
                     </section>
                     <section class="section repair">
                         <div class="subtitle-wrapper">
                             <h2 id="additional-service">Additional services</h2>
                         </div>
-                        <section class="section__content swiper">
+                        <section class="section__content repair__wrapper swiper collapse collapse--closed">
                             <ul class="section__card-wrapper repair__card-wrapper swiper-wrapper">
                                 <li class="section__card repair__card swiper-slide">
                                     <button class="btn repair__btn">
@@ -255,11 +255,11 @@
                                 </li>
                             </ul>
                             <div class="swiper-pagination"></div>
-                            <button class="btn btn__content repair__btn-expand">
-                                <span>Показать еще</span>
-                                <span class="btn btn__small btn__small--expand"></span>
-                            </button>
                         </section>
+                        <button class="btn btn__content repair__btn-expand">
+                            <span>Показать еще</span>
+                            <span class="btn btn__small btn__small--expand"></span>
+                        </button>
                     </section>
                     <section class="section price-list">
                         <div class="price-list__top">
@@ -347,46 +347,43 @@
     <dialog class="modal call">
         <!-- Dont forget to add block class="btn" -->
         <div class="modal__form-title-wrapper">
-            <button class="btn btn__medium btn__medium--close modal__btn-close"></button>
+            <button class="btn btn__medium btn__medium--close modal__btn-close call__btn-close"></button>
             <div class="title-wrapper">
                 <h1 class="call__title">Заказать звонок</h1>
             </div>
         </div>
         <form method="dialog" class="modal__form call__form">
             <div class="modal__form-top">
-                <input type="tel" placeholder="Телефон" name="tel" id="tel" class="modal__form-input" autofocus
+                <input type="tel" placeholder="Телефон" name="tel" id="call-tel" class="modal__form-input"
                     required>
             </div>
             <div class="modal__form-bottom">
-                <legend>Нажимая <q>отправить</q>, вы даете согласие на <a href="">обработку персональных данных</a> и
-                    соглашаетесь с нашей <a href="">политикой конфиденциальности</a></legend>
+                <span>Нажимая <q>отправить</q>, вы даете согласие на <a href="">обработку персональных данных</a> и
+                    соглашаетесь с нашей <a href="">политикой конфиденциальности</a></span>
                 <button class="btn btn__large btn__large--send  modal__form-submit" type="submit"></button>
             </div>
         </form>
     </dialog>
 
     <dialog class="modal feedback">
-        <!-- Dont forget to add block class="btn" -->
         <div class="modal__form-title-wrapper">
-            <button class="btn btn__medium btn__medium--close modal__btn-close"></button>
+            <button class="btn btn__medium btn__medium--close modal__btn-close feedback__btn-close"></button>
             <div class="title-wrapper">
                 <h1 class="feedback__title">Обратная связь</h1>
             </div>
-
-
         </div>
         <form method="dialog" class="modal__form feedback__form">
             <div class="modal__form-top">
-                <input type="text" placeholder="Имя" name="name" id="name" class="modal__form-input" autofocus required>
-                <input type="tel" placeholder="Телефон" name="tel" id="tel" class="modal__form-input" required>
+                <input type="text" placeholder="Имя" name="name" id="name" class="modal__form-input" required>
+                <input type="tel" placeholder="Телефон" name="feedback-tel" id="tel" class="modal__form-input" required>
                 <input type="email" placeholder="Электронная почта" name="email" id="email" class="modal__form-input"
                     required>
                 <textarea name="message" id="message" cols="20" rows="3" placeholder="Сообщение"
                     class="modal__form-input" required></textarea>
             </div>
             <div class="modal__form-bottom">
-                <legend>Нажимая <q>отправить</q>, вы даете согласие на <a href="">обработку персональных данных</a> и
-                    соглашаетесь с нашей <a href="">политикой конфиденциальности</a></legend>
+                <span>Нажимая <q>отправить</q>, вы даете согласие на <a href="">обработку персональных данных</a> и
+                    соглашаетесь с нашей <a href="">политикой конфиденциальности</a></span>
                 <button class="btn btn__large btn__large--send  modal__form-submit" type="submit"></button>
             </div>
         </form>

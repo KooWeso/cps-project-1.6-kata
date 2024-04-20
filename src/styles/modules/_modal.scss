@@ -9,8 +9,8 @@
 
 .modal {
     $width: min(100%, 30rem);
-    transition: transform 0.3s ease-in-out; // change with js later
-    transform: translateX(100%); // change with js later
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
     border-left: 2px solid $border-highlight-light;
     box-shadow: -.1rem 0 1rem 0 $shadow-light;
     margin-left: auto;
@@ -24,9 +24,8 @@
         }
 
         &::backdrop {
-            background-color: $background;
-            backdrop-filter: blur(1.5rem);
-            opacity: 0.2; // change with js later
+            background-color: $background-light;
+            opacity: 0.8
         }
 
         &__form {
@@ -37,12 +36,18 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+
+            & .title-wrapper {
+                overflow: hidden;
+                padding-left: $space;
+                margin-left: calc($space * -1);
+            }
         }
         
         &__btn-close {
             margin-right: auto;
             position: relative;
-            @media (min-width: 530px){ // change later
+            @media (min-width: $breakpoint-sm){
                 & {
                 position: absolute;
                 left: -4rem;
@@ -68,7 +73,8 @@
 
         &__form-input {
             width: 100%;
-            border: 1px solid $text-light;
+            border: 1px solid $border;
             border-radius: 0.5rem;
+            padding: 1rem;
         }
 }

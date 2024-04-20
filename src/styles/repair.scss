@@ -1,8 +1,12 @@
 @use './modules/module-bundle'as *;
 
 .repair {
+
+    &__card-wrapper {
+        min-height: 10rem;
+    }
     &__card {
-        height: 10rem;
+        min-height: 10rem;
     }
 
     &__btn {
@@ -12,6 +16,13 @@
 
         .btn {
             align-self: flex-end;
+        }
+    }
+
+    &__btn-expand {
+        
+        @media (min-width: 992px) {
+            display: none;
         }
     }
 

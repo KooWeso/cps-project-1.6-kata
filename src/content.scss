@@ -167,17 +167,11 @@
         width: 100%;
         object-fit: cover;
     }
-
-    &__button {
-        transition: filter .5s ease-in-out;
-        .btn {
-            transition: transform .5s ease-in-out;
-        }
-    }
 }
 
 .footer {
     border-top: 1px solid $border-highlight-light;
+    background-color: $background-light;
     padding: $space;
     @include flex(1rem, column, 0);
     text-align: center;

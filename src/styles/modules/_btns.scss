@@ -45,6 +45,7 @@ $btn-large: ( //type
         display: block;
         width: 1.5rem;
         aspect-ratio: 1/1;
+        transition: filter .5s ease-in-out,transform .5s ease-in-out;
 
         @each $name in map-keys($btn-small) {
             @include btnGet($btn-small, $name);
